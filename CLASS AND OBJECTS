@@ -1,0 +1,563 @@
+"""WAP to define a class with attribute employee name, id and address those with the help of object"""
+# class employee:
+#     emp_name="Yashraj"
+#     emp_id=71
+#     emp_add="Jaipur"
+# o1=employee()
+# print(o1.emp_name)
+# print(o1.emp_id)
+# print(o1.emp_add)
+
+"""WAP to create a class employee and that class is empty class . create a set of attribute of an object
+ of an empty class .set employee name to the user input . set employee age 40,then print the details.???"""
+# class employee:
+#     pass
+# emp1=employee()
+# emp1.name=input()
+# emp1.age=40
+# print("name is "+emp1.name+" age is ",emp1.age)
+
+"""WAP to define a class furniture with attribute type of furniture and price then print the
+values of these attribute using model 1 method ??"""
+# class  furniture:
+#     name="chair"
+#     price=1000
+#     def model1(self):
+#         print(self.name,self.price)
+# o1=furniture()
+# o1.model1()
+# o2=furniture()
+# o2.model1()
+
+# __init__(self, , , )
+"""WAP to define a class  with constructer __init__ then print the id of self,declare a object also print id of that object"""
+# class c1:
+#     def __init__(self):
+#         print("address of the object",id(self))
+# o1=c1()
+# print("address of the object",id(o1))
+# o2=c1()
+# print("address of the object",id(o2))
+
+"""WAP to create a class with student take the input from the user for name and age,name and age attributes 
+initialise asargument within __init__ method body create a instance from the class student then access the value"""
+# class student:
+#     def __init__(self,name,age):
+#         self.name=name
+#         self.age=age
+# n=input()
+# n1=int(input())
+# o1=student(n,n1)
+# print(o1.name,o1.age)
+
+"""WAP that uses the self variable in class method print the string pass to the method defined as set name with two argument self ,name . get name with 1 argument
+ self the name of the class is library ,read value of name from user and pass that as argument 2 set name then print that value using get name function   """
+# class library:
+#     def setname(self, name):
+#         self.name=name
+#     def getname (self):
+#         print("name of library",self.name)
+# l1=library()
+# k=input()
+# l1.setname(k)
+# l1.getname()
+# l2=library()
+# l2.setname("centeral library")
+# l2.getname()
+
+"""WAP to take the course name and contact hours as input from the user and tprint the detail of courses you have to be use 
+default constructer __init__ for taking the value and print those another functions and display courses"""
+# class courses:
+#     def __init__(self,cname,contact_hours):
+#         self.cname=cname
+#         self.contact_hours=contact_hours
+#     def displaycourse(self):
+#         print("course",self.cname)
+#         print("contact_hours",self.contact_hours)
+# i=input("course:")
+# j=int(input("hours:"))
+# c1=courses(i,j)
+# c1.displaycourse()
+
+# -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+"""METHOD OVERLOADING------"""
+# def area(v):
+#     print(v*v)
+# area(30)
+# def area(v1,v2):
+#     print(v1*v2)
+# area(30,50)
+
+# EX:-
+# class A:
+#     def area(self,a=None,b=None):
+#         if (a!=None) and b==None:
+#             print(a*a)
+#         else:
+#             print(a*b)
+# A1=A()
+# A1.area(30)
+# A1.area(30,50)
+
+"""WAP to perform method overloading with single argument funtion ,two argument funtion,three argument function"""
+# class A:
+#     def A1(self,a=None,b=None,c=None):
+#         if (a!=None) and b==None and  c==None:
+#             print(a)
+#         elif a!=None and b!=None and c==None:
+#             print(a,b)
+#         else:
+#             print(a,b,c)
+# o=A()
+# o.A1(30)
+# o.A1(30,50)
+# o.A1(20,30,50)
+
+# -------------------------------------------------------------------------------------------------------------------------------------------
+"""INHERITANCE"""
+# derived class ==child class
+
+# parent class == base class
+"""class A:
+    attributes
+    fun1
+    fun2
+class B(A)
+    ----
+    ----
+parent class"""
+
+"""WAP to create a class person with function display which print it is a parent class .
+ create a child class student which inherit the features of person and a new child class is empty class """
+# class person:
+#     def display(self):
+#         print("it is a parent class")
+# class student(person):
+#     pass
+# o1=student()
+# o1.display()
+
+# or
+# class person:
+#     def display(self):
+#         print("it is a parent class")
+# class student(person):
+#     def r1(self):
+#         print("child class")
+# o1=student()
+# o1.display()
+# o1.r1() upto this
+# o2=person()
+# o2.display()
+# o2.r1()  error in this case
+
+"""WAP  to create a class name student with first name ,last name and marks  pass these attributes at 
+the time of object declaration and print these values using child object only"""
+# class student:
+#     def __init__(self,fname,lname,marks):
+#         self.fname=fname
+#         self.lname=lname
+#         self.marks=marks
+#     def display(self):
+#         print(self.fname,self.lname,self.marks)
+# class ch(student):
+#     pass
+# o1=ch("Rohit","sharma",60)
+# o1.display()
+
+"""WAP to create a class furniture with function print details create    
+a child class chair which is also creating print detail function.""" #this is method OverRiding
+#
+# class furniture:
+#     def printdetail(self):
+#         print("Parent class detail")
+# class chair(furniture):
+#     def printdetail(self):
+#         print("child")
+# o1=chair()
+# o1.printdetail()
+# o2=furniture()
+# o2.printdetail()
+
+"""ALL THESE ARE SINGLE INHERITANCE"""
+
+"""WAP create a class cal1 with function submission which return sum of two numbers then create a class cal2 with multiplication function which perform multiplication
+ of two no.create a derived class which derived the feature of ca1 and ca2 also define divide function  which perform division with derived class object """
+# class cal1:
+#     def summation(self,a,b):
+#         return a+b
+# class cal2:
+#     def multiplication(self,a,b):
+#         return a*b
+# class derived(cal1,cal2):
+#     def divide(self,a,b):
+#         return a/b
+# d=derived()
+# print(d.summation(10,20))
+# print(d.multiplication(30,40))
+# print(d.divide(30,10))
+# num =[[[24,6],[8, 10]],[[9, 18], [12, 20]]]
+
+"""WAP to create a base class which initialise instance variable a=5 and the function return the value and fuc name
+is get_value , now create a derived class get_value which increament the value of a variable is from base class  """
+# class base:
+#     def __init__(self):
+#         self.a=5    #instance variable
+#     def get_value(self):  #Overriddig function
+#         return self.a
+# class derived(base):
+#     def get_value(self):   #child class
+#         return self.a+1
+# o1=derived()
+# print(o1.get_value())
+
+"""WAP to declare a base class A with init constructor ,declare derived class B with init constructor and access details of parent class using child class object """
+# class A:
+#     def __init__(self):
+#         print("Parent constructor")
+# class B(A):
+#     def __init__(self):
+#         A.__init__(self)
+#         print("Child constructor")
+# o1=B()
+
+""" WAP to declare object of derived class with class parameter name,rollno,branch and age ,name ,branch and name  are instance 
+of parent class,age is instance object of child class. display contents of student details with the derived class only"""
+# class parameter:
+#     def __init__(self,name,rollno,branch):
+#         self.name=name
+#         self.rollno=rollno
+#         self.branch=branch
+# class b(parameter):
+#     def __init__(self,name,rollno,branch,age):
+#         self.age=age
+#         parameter.__init__(self,name,rollno,branch)
+#     def display(self):
+#         print(self.name,self.age)
+# o1=b("YASHRAJ","a35","cse",19)
+# o1.display()
+
+"""MULTILEVEL INHERITANCE:----"""
+"""WAP to declare a class1 with class attribute x and print that value using function1 declare a class 2 which derive features of class 1
+ with class attribute y and print that value using function 2, declare a class 3 which derive features of class 2 with class attribute z and
+function 3 will add content of class1 attribute class 2 attribute and class3  attribute , access all the function using object declare for class3"""
+# class one:
+#     x=20
+#     def fun1(self):
+#         print(self.x)
+# class two(one):
+#     y=30
+#     def fun2(self):
+#         print(self.y)
+# class three(two):
+#     z=30
+#     def fun3(self):
+#         print(one.x+two.y+self.z)
+# o1=three()
+# o1.fun1()
+# o1.fun2()
+# o1.fun3()
+# o2=two()
+# o2.fun1()
+# o2.fun2()
+# o2.fun3() """It will give error """
+
+"""DATA MEMBERS:
+Public data members __varname__
+private data members __varname
+protect data members _varname"""
+
+"""WAP to declare a private data member name for class employee, employee id as public data member department 
+as protected data member,declare a object for a class and access data members with the help of that object"""
+# class employee:
+#     __name= "YASHRAJ"
+#     empid="11"                                                       #This all is DATA MANGLING
+#     _department="Cse"
+# e1=employee()
+# # print(e1.__name) #error
+# print(e1._employee__name)
+# print(e1.empid)
+# print(e1._department)
+
+# or
+# class employee:
+#     __name= "YASHRAJ"
+#     empid="11"                                                       #This all is DATA MANGLING
+#     _department="Cse"
+#     def display(self):
+#         print(self.__name,self.empid,self._department)
+# e1=employee()
+# e1.display()
+
+"""WAP to create a class value added courses take a inputs from user for course name,course 
+credits,and branch, print the details with other function that is display inherit new course
+ class from base class reading a new name from a user declare a private variable in new class
+  only the variable name is practicals print all the detail with the new class object"""
+# class valaddedcourse:
+#     def __init__(self):
+#         self.name= input()
+#         self.coursecredits=int(input())
+#         self.branch=input()
+#     def display(self):
+#         print(self.name)
+# class newcourse(valaddedcourse):
+#     __practicals="H"
+#     def __init__(self):
+#         self.newcourse= input()
+#         valaddedcourse.__init__(self)
+# o1=newcourse()
+# o1.valaddedcourse()
+
+"""HIERARCHICAL INHERITANCE"""
+"""WAP to create a class student detail with instance variable,regno,name and marks,also display these detail with disp function ,then for b create a class examination 
+with course code and seating plan,then create a class library take a class attribute issue a book against regno , then a third class d create a class research with 
+instance variable research paper and research value and inherit name and regno from class"""
+# class studentdetail:
+#     def __init__(self):
+#         self.regno=12208649
+#         self.name="yashraj"
+#         self.marks=99
+#     def disp(self):
+#         print(self.name,self.regno,self.marks)
+# class examination(studentdetail):
+#     coursecode=108
+#     seatingplan="26-403"
+#     def e1(self):
+#         print(self.regno,self.coursecode,self.seatingplan)
+# class library(studentdetail):
+#     def l1(self):
+#         print(self.regno)
+# class research(studentdetail):
+#         researchpaper="INT"
+#         researchvalue=50
+#         def dis(self):
+#             print(self.name,self.regno,self.researchpaper,self.researchvalue)
+# o1=examination()
+# o1.disp()
+# o1.e1()
+# o2=library()
+# o2.l1()
+# o3=research()
+# o3.dis()
+
+"""HYBRID INHERITANCE"""
+    #         A
+    # B -------| ----------C
+    # |
+    # D
+
+"""WAP to create a base class Adhaar with Adhaar card no,name and address. name and address are private details then create a 
+derived class bank details with PAN card no and birth detail access name and address from base class using derived class object"""
+
+"""FILE HANDLING """
+# we use open() fuc to represent a file
+# =open (filename,mode)
+# for text file modes are--- r(read),w(write),a(append) it apeend at end of file,r+(use for read and write),a+(read and append)
+# f=open("C:/Users/yashr/OneDrive/Desktop/25.txt","r")
+# f.write("Python program")
+# t=f.read()6
+# print(t)
+
+# we discused file object, file descripter,file identifier,open(),read(),write(),close()
+
+"""WAP to copy contents of one file to another and print those details line by line on output console"""
+# fin=open("C:/Users/yashr/OneDrive/Desktop/2.txt","r")
+# fout=open("C:/Users/yashr/OneDrive/Desktop/3.txt","w")
+# for line in fin:
+#     fout.write(line)
+# fin.close()
+# fout.close()
+# f=open("C:/Users/yashr/OneDrive/Desktop/3.txt","r")
+# # print(f.readlines())
+# # or
+# for L in f:
+#     print(L,end="")
+
+"""WAP to count no of character in file ,no of words in file ,and no of lines in the files"""
+# f=open("C:/Users/yashr/OneDrive/Desktop/2.txt","r")
+# wordcount=linecount=charcount=0
+# for l in f:
+#     linecount+=1
+#     wordcount+=len(l.split())
+#     charcount+=len(l)
+# print("linecount",linecount)
+# print("wordcount",wordcount)
+# print("charcount",charcount)
+
+"""SEEK"""
+"""seek(offset,position)"""
+# f=open("C:/Users/yashr/OneDrive/Desktop/2.txt","r")
+# f.seek(5)
+# print(f.read(4))
+# print(f.tell())
+
+"""WAP to open a file for read a1.txt open the file for write new1.txt , read the file and copy it to the new file and 
+close both the file pointers ,open the new one file as read and write . read and print first 12 characters . print the read 
+courser write some text of length 20.position the courser at 12 and print the character at that position.position the 
+courser at 15 and read all tha contents from that position"""
+# f1=open("C:/Users/yashr/OneDrive/Desktop/a1.txt","r")
+# f2=open("C:/Users/yashr/OneDrive/Desktop/new1.txt","w")
+# f2.write(f1.read())
+# f1.close()
+# f2.close()
+# f3=open("C:/Users/yashr/OneDrive/Desktop/new1.txt","r+")
+# print(f3.read(12))
+# print(f3.tell())
+# f3.seek(12)
+# print(f3.read(1))
+# f3.seek(15)
+# f3.write("This is")
+# print(f3.read())
+
+"""WAP to declare a list and write those contents into file at end of the file only open 
+that file and read mode and read 5th line from the file """
+# l1=["This","is","Python","class"]
+# for i  in l1:
+#     f1=open("C:/Users/yashr/OneDrive/Desktop/a1.txt","a+")
+#     f1.write(i)
+# print(f1.readline(5))
+# f1.close()
+
+"""WAP to declare a dictionary and write that into file """
+# details={'Name':"BoB",'Age':28}
+# with open('a1.txt','w') as data:
+#     data.write(str(details))
+
+"""WAP to check divide by 0 error"""
+# a=int(input())
+# b=int(input())
+# print(a/b)
+
+"""EXCEPTION HANDLING"""
+# It is an event which occurs to disrupt the flow of a given program.
+"""take two integer input num1 and num2 from the user using input()function .divide num1 and num2 using try except block"""
+# num1=int(input())
+# num2=int(input())
+# try:
+#    num3= num1/num2
+#    print(num3)
+# except:
+#     print("ZeroDivisionError")
+
+"""WAP  open the try block 
+take two integer a and b from user 
+perform arithmetic operation +,/,* on a and 
+store in c,d,e
+print try successful"""
+
+# a=int(input())
+# b=int(input())
+# try:
+#     c=a+b
+#     d=a/b
+#     e=a*b
+#     if a==0:
+#         f=fun1(a)
+#     print("try successful")
+# except ZeroDivisionError:
+#     print("zero division error occurred")
+# except NameError:
+#     print("name error occurred")
+# except Exception:
+#     print("exception occurred")
+# def fun1(n):
+#     print(n)
+
+"""WAP with a try block and two except block take 
+two input store in a and b  and check zerodivision 
+error except block with exception and use finally also"""
+# r="y"
+# while r=="y":
+#     try:
+#         a=int(input())
+#         b=int(input())
+#         c=a+b
+#         d=a/b
+#         e=a*b
+#     except ZeroDivisionError:
+#         print("zero division error occurred")
+#     finally:
+#         print("Do you want to continue?(Y/N)")
+
+"""RAISE EXCEPTION"""
+"""WAP to define a function check a with parameter age ,check if the age is>0 raise a exception   if a<0 raise exception value error the function check start try block ask the user to enter the age
+and call check a function the except block handle value error by printing to console that a>=0 also include finally block."""
+# def checkage(age):
+#     if age<0:
+#         raise ValueError("age should be greater than or equal to zero")
+#     print()
+# try:
+#     age=int(input("age:"))
+#     checkage(age)
+# except ValueError as err:
+#     print(err.args)
+# finally:
+#     print("executed in any condition")
+
+"""WAP to open a file kk1.txt in read mode if file does not exists throw a exception"""
+# try:
+#     f = open("C:/Users/yashr/OneDrive/Desktop/kk1.txt", "r")
+# except Exception as er:
+#     print("file not found")
+
+"""WAP to create  a user defined exception class which is using arithematic division operator define a class our exception with 
+exception as a base class inside this class use init constructor with self and message,now define a new class using user exception 
+,start a try block and take a,b from user if b=0 then raise our exception with message b>0 otherwise do operation division """
+# class OurException(Exception):
+#     def __init__(self,message)
+#         self.message = message
+# class UsingUserException:
+#     try:
+#         a=int(input("a:"))
+#         b=int(input("b:"))
+#         if b==0:
+#             raise OurException("b should br greater than 0")
+#         d=a/b
+#         print("division operation successful with result:",d)
+#     except OurException as err:
+#         print("user defined exception:",err.message)
+
+"""WAP to create a dictionary make use of open a file in binary file make a use of  pickle.dump to write data into file then make a use of pickle load to """
+import pickle
+animalDict={"cat":2,"Dog":7,"Lion":4,"Tiger":9,"Leopard":11,"Bear":8,"Elephant":15}
+outfile=open('animals','wb')
+pickle.dump(animalDict,outfile)
+outfile.close()
+fst=open('animals','rb')
+data=pickle.load(fst)
+try:
+    while(True):
+        print(data)
+        data=pickle.load(fst)
+except:
+    print("Bye")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
