@@ -1,0 +1,179 @@
+# d1={"Regno":123456,"Name":"Rohit","Address":"Punjab"}
+# print(d1)
+# print(d1["Regno"])
+# print(d1.get("marks"))
+# d1["marks"]=100
+# print(d1)
+# d1["Regno"]=234562
+# print(d1)
+# print(d1.keys())
+# print(d1.values())
+# print(d1.items())
+
+# d1=dict([("Regno",12345),("name","rohit")])
+# print(d1)
+# d2=dict(Regno=2345,name="rohit")
+# print(d2)
+
+# d1=dict([("Regno",12345),("name","rohit")])
+# for i in sorted(d1):
+#     print(i)
+#     print(d1[i])
+# or
+# d1=dict([("Regno",12345),("name","rohit")])
+# for (i,j) in sorted(d1.items()):
+#     print("key",i)
+#     print("value",j)
+
+# l1=[1,2,3]
+# l2=['a','b','c']
+# d1=dict(zip(l1,l2))
+# print(d1)
+
+# dict1=dict(a="happy",b="rohit")
+# print(dict1)
+# print(dict1.values())
+# print(dict1.items())
+
+# how to delete value from
+# d1={'a':123,'b':12,'c':123}
+# d1.pop('a')
+# print(d1)
+# d1.popitem()
+# print(d1)
+# d1.clear()
+# print(d1)
+
+# Ex==== WAP take key and value inputs from the user and create a dictionary read a key from the user
+# if key is exist in the dictionary then remove the contents otherwise print key does not exist in dictionary
+# d1=input("data1:")
+# d2=input("data2:")
+# l1=d1.split(",")
+# l2=d2.split(",")
+# dict1=dict(zip(l1,l2))
+# key=input()
+# if key in dict1:
+#     dict1.pop(key)
+#     print(dict1)
+# else:
+#     print("key does not belongs to dictionary")
+
+# Ex=== WAP to create a dictionary using two list create two list using user list element if the size
+#  of both the list is different then print length should be equal otherwise prepare dictionary to it.
+# d1=input("data1:")
+# d2=input("data2:")
+# l1=d1.split(",")
+# l2=d2.split(",")
+# d1={}
+# if len(l1)==len(l2):
+#     for i in range(len(l1)):
+#         d1[l1[i]]=l2[i]
+# else:
+#     print("length should be equal")
+# print(sorted(d1.items()))
+
+# Ex=== WAP to find minimmum and maximum value from the dictionary
+# d1=input("data1:")
+# d2=input("data2:")
+# l1=d1.split(",")
+# l2=d2.split(",")
+# d1=dict(zip(l1,l2)) or d1={[(key,int(values) for key(values) in sorted(d1.items)
+# l3=[]
+# for key in d1:
+#     l3.append(d1[key])
+# l3.sort()
+# print("min",l3[0])
+# print("max",l3[-1])
+
+#Ex==== WAP to exchange key and values of dictionary
+# d1=input()
+# d2=input()
+# l1=d1.split(",")
+# l2=d2.split(",")
+# dict1=dict(zip(l1,l2))
+# d3={}
+# for key in dict1:
+#     d3[dict1[key]]=key
+# print(sorted(dict1.items()))
+# print(sorted(d3.items()))
+
+# multiple value
+# d1={"Regno":[1234,1111,1115],"name":["rohit","aryan","aman"]}
+# print(d1)
+# print(d1["Regno"])
+# print(d1["Regno"][1])
+
+# composite keys
+# d1={("65","K22SH"):"Rohit",("65","K22HH"):"Abhinav",("63","K22SH"):"Happy"}
+# print(d1["65","K22SH"])
+
+# traverse it
+# d1={("65","K22SH"):"Rohit",("65","K22HH"):"Abhinav",("63","K22SH"):"Happy"}
+# for i,j in d1:
+#     print(d1[i,j])
+
+# WAP to traverse a dictionary as per the case mention here:-
+# output= K22SH65 40
+#         K22HH65 85
+#         K22SH63 20
+# d1={("65","K22SH"):[80,40,60],("65","K22HH"):[40,85,35],("63","K22SH"):[20,20,40]}
+# for i,j in d1:
+#     print(j+i,d1[i,j][1])
+
+# WAP to read user define values and sort the contents of dictionary as per key
+# output: d1=3,2,4
+#         d2=20,50,60
+#   o/p=    2  50
+#           3  20
+#           4  60
+# d1=input("data1:")
+# d2=input("data2:")
+# l1=[int(x) for x in d1.split(",")]
+# l2=[int(y) for y in d2.split(",")]
+# dict1=dict(zip(l1,l2))
+# l3=l1.sort()
+# for k in l3:
+#     print(k,d1[k])
+
+"""WAP to combine contents of dictionary into a 3rd dictionary with .copy"""
+# d1={1:30,2:50}
+# d2={3:50,4:60}
+# d3=d2.copy()
+# d1.update(d3)
+# print(d1)
+
+# ex=
+# key=input()
+# value=input()
+# dict1=dict(zip(key,value))
+# key1=input()
+# value1=input()
+# dict2=dict(zip(key1,value1))
+# dict3=dict2.copy()
+# dict1.update(dict3)
+# print(dict1)
+"""
+WAP to create two dictionary the first one has element of the form ordinal value column character A to Z
+and a seccond one character word value and other is sky value as character
+o/p d1={("65":"A"),("66","B")}
+    d2={("A":"65"),("B":"66")}"""
+# d1={x:chr(x) for x in range(65,91)}
+# d2={y:x for x,y in d1.items()}
+# print(sorted(d1.items()))
+# print(sorted(d2.items()))
+
+"""WAP to transpose a matrix m=[1,2,3,4],[5,6,7,8],[9,10,11,12]
+o/p= [[1,5,9],[2,6,10],[3,7,11],[4,8,12]]"""
+# m=[1,2,3,4],[5,6,7,8],[9,10,11,12]
+# t1=[]
+# for i in range(len(m)+1):
+#     t2=[]
+#     for rows in m:
+#         # print(rows)
+#         # print(rows[i])
+#         t2.append(rows[i])
+#     print(t1.append(t2))
+
+
+
+
