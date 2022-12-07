@@ -1,0 +1,182 @@
+# def student(name,section="K22SH"):
+#     print("Student name:",name)
+#     print("Section:",section)
+# student("rahul" )
+# student("abhi","K22ST")
+
+# def student(name,section="K22SH"):
+#     print("Student name:",name)
+#     print("Section:",section)
+# student(section="K22SH" , name="rahul" )
+# student("rahul",section="K22SH")
+# student(name="rahul","k22SH")  #this line will give error. this is positional argument it will come first
+
+#ex 1
+# num=int(input())
+# for i in range(num,0):
+#     fact1=1
+#     while(num!=0):
+#         fact=fact1*i
+#         num=num-1
+#     print(fact)
+
+# def s1(name,rollno=1):   example
+#     print(name,rollno)
+# s1("rohit")
+
+#ex 5
+# def stu1(*arg):
+#     print(arg)
+# studentname =input()
+# rollno =int(input())
+# section=input()
+# stu1(studentname,rollno,section)   #show you in touples
+#
+# def stu1(*arg):
+#     for i in arg:
+#         print(i)
+# studentname =input()
+# rollno =int(input())
+# section=input()
+# stu1(studentname,rollno,section)   #this show  you line by line using for loop
+
+#ex:-6
+# def sum(*arg):
+#     s1=0
+#     for i in arg:
+#         s1=s1+i
+#     print(s1)
+# sum(20,10,2,3,5)
+
+#ex:-7
+# def max(*arg):
+#     max=arg[0]
+#     for i in arg:
+#         if max<i:
+#             max=i
+#     print(max)
+# max(20,10,2,3,5)
+
+#anonymous function
+# a1= lambda a:a+10
+# print(a1(3))
+
+# ex:-8
+# a1= lambda a,b:a*b
+# a=int(input())
+# b=int(input())
+# print(a1(a,b))
+
+#fruitful function
+# ex:-9
+# def sqr(n):
+#     return n*n
+# print(sqr(2)) #or
+# c=sqr(2)
+# print(c)
+
+#ex local variables
+# def mul():
+#     a=20
+#     b=30
+#     print(a*b)
+# def sum():
+#     a=10
+#     b=10
+#     print(a+b)
+# mul()
+
+# ex global variable
+g1="H1"
+# def k1():
+#     global g1
+#     g1="hello"
+# def k2():
+#     g1="good morning"
+# print(g1)
+# k1()
+# k2()
+# print(g1)
+
+# ex
+a=10
+# def s1():
+#     a=20
+# def s2():
+#     global a
+#     a=30
+# print(a)
+# s1()
+# s2()
+# print(a)
+
+# stack
+# ex:-1
+
+# def fact(n):
+#     if n==1:
+#         return n
+#     else:
+#         return n*fact(n-1)
+# print(fact(5))
+# ex:-2
+# def sum(x,y):
+#     if y==0:
+#         return x
+#     else:
+#         return (x+y)
+# print(sum(3,2))
+
+ex:-3
+# def rev(n,r):
+#     if n==0:
+#         return r
+#     else:
+#         return rev(n//10,r*10+n%10)
+# print(rev(435,0))
+
+# ex string
+# str=input()
+# a=len(str)
+# for i in range(0,a):
+#     print(str[i]+str[i],end="")
+
+# st="python programming"
+# print(st.count('p'))
+#
+# st="python"
+# print(st.center(10,'$'))
+
+# st="python"
+# print(st.endswith('n'))
+# print(st.startswith('py'))
+
+# st='python'
+# print(st.find('on'))
+
+# st='python'
+# print(st.isupper())
+# print(st.islower())
+# print(st.istitle())
+# print(st.isspace())
+# print(st.isalpha())
+# print(st.isalnum())
+# print(st.isdigit())
+
+#  ex 1
+# str1=input()
+# str2=input()
+# print(str1.count(str2))
+
+# import string
+# print(dir(string))
+# st1="python programming"
+# print(string.capwords(st1))
+# print(string.printable)
+# print(string.punctuation)
+# print(string.hexdigits)
+# print(string.octdigits)
+# print(string.digits)
+# print(string.ascii_letters)
+# print(string.ascii_lowercase)
+# print(string.ascii_uppercase)
