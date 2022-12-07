@@ -1,0 +1,62 @@
+#a1 = int(input("enter_a1"))
+#a2 = int(input("enter_a2"))
+#c = a1+a2
+#print(c)
+
+#a=453
+#b=123
+#c=str(a)+str(b)
+#print(c)
+
+#a=input("enter_d")
+#b=input("enter_e")
+#c=float(a)*float(b)
+#print(c)
+
+#argument specifier
+#a1=23
+#b1=25.3
+#print("integer value %d"%a1)
+#print("float value=%.1f and one digit after decimal"%b1)
+
+#example
+#num1=int(input("enter num1"))
+#num2=int(input("enter num2"))
+#result1=num1**num2
+#result2=num1//num2
+#print("first number %d ** second number %d= %d" %(num1,num2,result1))
+#print("%d//%d=%d" %(num1,num2,result2))
+
+#ex 2
+#a=int(input("enter value"))
+#print("%d octal=%o" %(a,a))
+
+#ex of sep
+#print("K22SH",23,25,sep="\n")
+
+#ex
+#print("K22SH","python","class")
+#print("K22SH","python","class",sep="")
+#print("K22SH","python","class",sep="",end="test5\n",)
+#print("K22SH","python","class",sep=",")
+
+#ex of print
+#s1="k22"
+#s2=23
+#print("section{} and marks are {}".format(s1,s2))
+#print("section{1} and marks are {0}".format(s1,s2))
+
+#div mode
+#print(divmod(8,3))
+
+#comparison operrator
+
+#ex
+#a=10
+#b=10
+#print(a==b)
+
+#a=int(input())
+#b=int(input())
+#c=a+(-b)
+#print(c)
